@@ -36,7 +36,7 @@ function render(data) {
                             <a target="_blank" href="${data[i]}">${data[i]}</a>
                       </li>`;
     }
-    listEl = listItems;
+    listEl.innerHTML = listItems;
 }
 // Delete all the data with a double click
 deleteBtn.addEventListener('dblclick', function() {
