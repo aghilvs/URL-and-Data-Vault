@@ -17,8 +17,8 @@ urlBtn.addEventListener('click', function() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
         myData.push(tabs[0].url)
     })
-    render(myData)
     localStorage.setItem('myData',JSON.stringify(myData));
+    render(myData)
 })
 const dataFromLocalStorage = JSON.parse(localStorage.getItem("myData"));
 
